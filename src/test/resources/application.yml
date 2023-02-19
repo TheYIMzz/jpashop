@@ -1,0 +1,25 @@
+server:
+  port: 10000
+
+# 테스트의 yml과 운영의 yml이 둘다 있으면 테스트 yml만 실행되고 운영 yml은 무시된다.
+
+spring: # 스프링부트에서는 별도의 설정이 없으면 메모리 모드로 돌린다.
+#  datasource:
+#    url: jdbc:h2:mem:test => 메모리모드
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    properties:
+#      hibernate:
+##        show_sql: true
+#        format_sql: true
+
+
+logging:
+  level:
+    org.hibernate.sql: debug
+    org.hibernate.type: trace
